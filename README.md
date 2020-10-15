@@ -7,8 +7,8 @@ during campaign process has a relationship with the election outcome after votin
 * Secondly, try to predict the outcome of election process from the expenditure of each candidiate
 
 ### Data description
-The data used is an hosted kaggle dataset provided at the given link
-https://www.kaggle.com/danerbland/electionfinance
+The data used is an hosted kaggle dataset provided <a href="https://www.kaggle.com/danerbland/electionfinance">here</a>
+
 
 *features of the dataset are explained below*
 
@@ -67,3 +67,6 @@ https://www.kaggle.com/danerbland/electionfinance
   - Y: yes
   - N: no
 - votes: number of votes in favour of candidate
+
+# Note: 
+more novel data about the united states campaign to election process can be found <a href="https://www.fec.gov/data/browse-data/?tab=candidates">here</a>
