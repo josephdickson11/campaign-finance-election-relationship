@@ -8,8 +8,8 @@ import numpy as np
 app = Flask(__name__)
 
 # create model object
-model = load('HOR_model_pipeline')
-pedictor_col = ['can_off','can_off_sta','can_off_dis','can_inc_cha_ope_sea','net_ope_exp','can_par_aff','campaign_duration','winner']
+model = load('HOR_model_pipeline.pkl')
+pedictor_col = ['can_off','can_off_sta','can_off_dis','can_inc_cha_ope_sea','net_ope_exp','can_par_aff','campaign_duration']
 
 
 # run the server
@@ -21,7 +21,7 @@ pedictor_col = ['can_off','can_off_sta','can_off_dis','can_inc_cha_ope_sea','net
 @app.route("/")  # decorator
 def home():  # route handler function
     # returning a response
-    return render_template('index.html')
+    return render_template('home.html')
 
 
 # create prediction function
@@ -32,4 +32,4 @@ def predict():
     data_unseen = pd.DataFrame([final], columns=pedictor_col)
     prediction = model.predict(data_unseen)
     prediction = int(prediction.Label[0])
-    return render_template('index.html', pred='Expected insurance bill will be around ${}'.format(prediction))
+    return render_template('home.html', pred='Expected insurance bill will be around ${}'.format(prediction))
