@@ -21,7 +21,7 @@ pedictor_col = ['can_off','can_off_sta','can_off_dis','can_inc_cha_ope_sea','net
 @app.route("/")  # decorator
 def home():  # route handler function
     # returning a response
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 # create prediction function
@@ -31,5 +31,10 @@ def predict():
     final = np.array(int_features)
     data_unseen = pd.DataFrame([final], columns=pedictor_col)
     prediction = model.predict(data_unseen)
-    prediction = int(prediction.Label[0])
-    return render_template('home.html', pred='Expected insurance bill will be around ${}'.format(prediction))
+    if prediction == "Y":
+        prediction = "you will win the election"
+    else:
+        prediction = "you will not win the election given these circumstances"
+        return  prediction
+
+    return render_template('index.html', pred=prediction)
