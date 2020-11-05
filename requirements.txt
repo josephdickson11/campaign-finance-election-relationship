@@ -4,13 +4,13 @@ Flask==1.1.2
 gunicorn==20.0.4
 itsdangerous==1.1.0
 Jinja2==2.11.2
-joblib @ file:///tmp/build/80754af9/joblib_1601912903842/work
-MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
+joblib 
+MarkupSafe 
 mkl-fft==1.2.0
 mkl-random==1.1.1
 mkl-service==2.3.0
-numpy @ file:///C:/ci/numpy_and_numpy_base_1603468620949/work
-pandas @ file:///C:/ci/pandas_1602088205210/work
+numpy
+pandas
 python-dateutil==2.8.1
 pytz==2020.1
 scikit-learn==0.23.2
