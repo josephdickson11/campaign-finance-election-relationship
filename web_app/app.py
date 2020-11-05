@@ -36,5 +36,4 @@ def predict():
     else:
         prediction = "you will not win the election given these circumstances"
         return  prediction
-
     return render_template('index.html', pred=prediction)
